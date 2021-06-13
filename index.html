@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment 6</title>
+    <style>
+        button{
+            background-color: cadetblue;
+            padding: 5px;
+            margin: 5px;
+        }
+        .buttons_style{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .layout_box{
+            background-color: blue;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout_box">
+    <h2 style="color: cadetblue;text-align: center;">0</h2>
+    <div class="buttons_style">    <button id="btn1" onclick="funct(event)">-5</button>
+    <button id="btn2" onclick="funct(event)">-1</button>
+    <button id="btn3" onclick="funct(event)">+1</button>
+    <button id="btn4" onclick="funct(event)">+5</button>
+    </div>
+    </div>
+    <script>
+        function funct(event){
+            var x=document.getElementsByTagName("h2");
+            /*console.log(x[0].innerHTML)
+            console.log("okay")
+            console.log(typeof x[0].innerHTML)*/
+            var y=parseInt(x[0].innerHTML)+parseInt(event.target.innerHTML)
+            x[0].innerHTML=y
+        }
+    </script>
+</body>
+</html>
